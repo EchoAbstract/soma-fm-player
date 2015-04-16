@@ -228,6 +228,8 @@ NSInteger GetStationMenuPlacementIndex(){
     NSMenuItem *stationMenu = [self buildStationMenu];
     NSInteger index = GetStationMenuPlacementIndex(window);
     
+    stations = [stationMenu.submenu copyWithZone:[NSMenu menuZone]];
+    
     NSMenu *mainMenu = [NSApp mainMenu];
     [mainMenu insertItem:stationMenu atIndex:index];
     
@@ -245,10 +247,7 @@ NSInteger GetStationMenuPlacementIndex(){
     playbackView = [[AVPlayerView alloc] initWithFrame:playerFrame];
     
     playbackView.controlsStyle = AVPlayerViewControlsStyleDefault;
-    playbackView.actionPopUpButtonMenu = stationMenu.submenu;
-    
-    stations = stationMenu.submenu;
-    
+    playbackView.actionPopUpButtonMenu = stations;
     
     [window.contentView addSubview:playbackView];
     
