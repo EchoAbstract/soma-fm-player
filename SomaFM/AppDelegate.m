@@ -18,7 +18,7 @@
 @property (nonatomic, retain) AppleMediaKeyController *mediaKeyController;
 
 @property (nonatomic, retain) AVPlayerView *playbackView;
-@property (nonatomic, retain) NSDictionary *stationMap;
+@property (nonatomic, retain) NSArray *stationMap;
 
 @property (nonatomic, retain) NSMenu *stations;
 @end
@@ -29,20 +29,20 @@
 @property (nonatomic, copy) NSString *shortKey;
 @property (nonatomic, copy) NSString *playlistLocation;
 @property (nonatomic, retain) NSImage *icon;
-@property (nonatomic, readwrite) int sortKey;
+@property (nonatomic, readwrite) int sortOrder;
 
 + (instancetype)stationInfoForStationNamed: (NSString *)stationName;
 
 + (instancetype)stationInfoForStationNamed: (NSString *)stationName
                       withPlaylistLocation: (NSString *)playlistLocation
                               withShortKey: (NSString *)shortKey
-                               atSortOrder: (int)sortKey;
+                               atSortOrder: (int)sortOrder;
 
 + (instancetype)stationInfoForStationNamed: (NSString *)stationName
                       withPlaylistLocation: (NSString *)playlistLocation
                               withShortKey: (NSString *)shortKey
                              withIconNamed: (NSString *)iconName
-                               atSortOrder: (int)sortKey;
+                               atSortOrder: (int)sortOrder;
 
 
 @end
@@ -56,14 +56,14 @@
 + (instancetype)stationInfoForStationNamed: (NSString *)stationName
                       withPlaylistLocation: (NSString *)playlistLocation
                               withShortKey: (NSString *)shortKey
-                               atSortOrder: (int)sortKey {
+                               atSortOrder: (int)sortOrder {
 
     
     StationInfo *stationInfo = [[StationInfo alloc] init];
     stationInfo.name = stationName;
     stationInfo.playlistLocation = playlistLocation;
     stationInfo.shortKey = shortKey;
-    stationInfo.sortKey = sortKey;
+    stationInfo.sortOrder = sortOrder;
     stationInfo.icon = nil;
     
     return stationInfo;
@@ -74,12 +74,12 @@
                       withPlaylistLocation: (NSString *)playlistLocation
                               withShortKey: (NSString *)shortKey
                              withIconNamed: (NSString *)iconName
-                               atSortOrder: (int)sortKey {
+                               atSortOrder: (int)sortOrder {
     
     StationInfo *stationInfo = [StationInfo stationInfoForStationNamed:stationName
                                                   withPlaylistLocation:playlistLocation
                                                           withShortKey:shortKey
-                                                           atSortOrder:sortKey];
+                                                           atSortOrder:sortOrder];
     
     NSImage *icon = [NSImage imageNamed:iconName];
     stationInfo.icon = icon;
@@ -101,26 +101,41 @@
 
 #pragma mark - Constants
 
-const NSString *kSortKey = @"sortKey";
-const NSString *kShortKey = @"shortKey";
-const NSString *kPlaylistLocation = @"playlistLocation";
 const NSString *kDefaultStationKey = @"Drone Zone";
-const NSString *kIconKey = @"iconKey";
-
 
 #pragma mark - Menu Stuff
 - (void)buildStationMap {
-    stationMap = @{
-                   @"Drone Zone":       @{kSortKey: @1, kShortKey: @"1", kPlaylistLocation: @"http://somafm.com/dronezone130.pls", kIconKey: @"test"},
-                   @"Lush":             @{kSortKey: @6, kShortKey: @"6", kPlaylistLocation: @"http://somafm.com/lush130.pls"},
-                   @"Underground 80's": @{kSortKey: @3, kShortKey: @"3", kPlaylistLocation: @"http://somafm.com/u80s130.pls"},
-                   @"PopTron":          @{kSortKey: @2, kShortKey: @"2", kPlaylistLocation: @"http://somafm.com/poptron64.pls"},
-                   @"Seven Inch Soul":  @{kSortKey: @9, kShortKey: @"",  kPlaylistLocation: @"http://somafm.com/7soul130.pls"},
-                   @"Suburbs of Goa":   @{kSortKey: @8, kShortKey: @"",  kPlaylistLocation: @"http://somafm.com/suburbsofgoa130.pls"},
-                   @"Deep Space One":   @{kSortKey: @7, kShortKey: @"",  kPlaylistLocation: @"http://somafm.com/deepspaceone130.pls"},
-                   @"DEF CON Radio":    @{kSortKey: @4, kShortKey: @"4", kPlaylistLocation: @"http://somafm.com/defcon64.pls"},
-                   @"SF 10-33":         @{kSortKey: @5, kShortKey: @"5", kPlaylistLocation: @"http://somafm.com/sf103364.pls"},
-                   };
+    stationMap = @[
+                   [StationInfo stationInfoForStationNamed:@"Drone Zone"       withPlaylistLocation:@"http://somafm.com/dronezone130.pls"    withShortKey:@"1" withIconNamed:@"test" atSortOrder:1],
+                   [StationInfo stationInfoForStationNamed:@"Lush"             withPlaylistLocation:@"http://somafm.com/lush130.pls"         withShortKey:@"6" withIconNamed:nil atSortOrder:6],
+                   [StationInfo stationInfoForStationNamed:@"Underground 80's" withPlaylistLocation:@"http://somafm.com/u80s130.pls"         withShortKey:@"3" withIconNamed:nil atSortOrder:3],
+                   [StationInfo stationInfoForStationNamed:@"PopTron"          withPlaylistLocation:@"http://somafm.com/poptron64.pls"       withShortKey:@"2" withIconNamed:@"test" atSortOrder:2],
+                   [StationInfo stationInfoForStationNamed:@"Seven Inch Soul"  withPlaylistLocation:@"http://somafm.com/7soul130.pls"        withShortKey:@"" withIconNamed:nil atSortOrder:9],
+                   [StationInfo stationInfoForStationNamed:@"Suburbs of Goa"   withPlaylistLocation:@"http://somafm.com/suburbsofgoa130.pls" withShortKey:@"" withIconNamed:nil atSortOrder:8],
+                   [StationInfo stationInfoForStationNamed:@"Deep Space One"   withPlaylistLocation:@"http://somafm.com/deepspaceone130.pls" withShortKey:@"" withIconNamed:nil atSortOrder:7],
+                   [StationInfo stationInfoForStationNamed:@"DEF CON Radio"    withPlaylistLocation:@"http://somafm.com/defcon64.pls"        withShortKey:@"4" withIconNamed:nil atSortOrder:4],
+                   [StationInfo stationInfoForStationNamed:@"SF 10-33"         withPlaylistLocation:@"http://somafm.com/sf103364.pls"        withShortKey:@"5" withIconNamed:nil atSortOrder:5]
+                   ];
+}
+
+- (StationInfo *)stationInfoForStationNamed: (NSString *)name {
+  for (StationInfo *info in stationMap){
+    if ([info.name isEqualToString: name]){
+      return info;
+    }
+  }
+  return nil;
+}
+
+- (NSArray *)sortedStations {
+    NSArray *sortedStations = [stationMap sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
+        StationInfo *station1 = (StationInfo *)obj1;
+        StationInfo *station2 = (StationInfo *)obj2;
+        
+        return station1.sortOrder > station2.sortOrder;
+    }];
+    
+    return sortedStations;
 }
 
 
@@ -129,25 +144,12 @@ const NSString *kIconKey = @"iconKey";
     NSMenu *stationMenu = [[NSMenu allocWithZone:[NSMenu menuZone]] initWithTitle:@"Stations"];
     stationMenuItem.submenu = stationMenu;
 
-    NSArray *stations = [[stationMap allKeys] sortedArrayUsingComparator:^NSComparisonResult(id obj1, id obj2) {
-        NSString *s1 = (NSString *)obj1;
-        NSString *s2 = (NSString *)obj2;
-        NSDictionary *d1 = stationMap[s1];
-        NSDictionary *d2 = stationMap[s2];
-
-        NSNumber *n1 = d1[kSortKey];
-        NSNumber *n2 = d2[kSortKey];
-        
-        return [n1 compare:n2];
-    }];
+    NSArray *sortedStations = [self sortedStations];
     
-    int key = 1;
-    for (NSString *station in stations){
-        NSDictionary *info = stationMap[station];
-        [stationMenu addItemWithTitle:station action:@selector(setStation:) keyEquivalent:info[kShortKey]];
-        key++;
+    for (StationInfo *station in sortedStations){
+        NSLog(@"Adding station %@ to menu with key %@", station.name, station.shortKey);
+        [stationMenu addItemWithTitle:station.name action:@selector(setStation:) keyEquivalent:station.shortKey];
     }
-    
     
     return stationMenuItem;
 }
@@ -168,9 +170,9 @@ NSInteger GetStationMenuPlacementIndex(){
 -(void)setStation: (id)sender {
     NSLog(@"Got command to change the station: %@\n", sender);
     NSMenuItem *station = (NSMenuItem *)sender;
-    NSDictionary *stationInfo = stationMap[station.title];
-    
-    [self tuneStation: station.title withPlaylistURL:[NSURL URLWithString:stationInfo[kPlaylistLocation]]];
+    StationInfo *info = [self stationInfoForStationNamed:station.title];
+
+    [self tuneStation:info];
 }
 
 
@@ -186,8 +188,10 @@ NSInteger GetStationMenuPlacementIndex(){
     }
 }
 
-- (void)tuneStation: (NSString *)station withPlaylistURL: (NSURL *)playlistURL {
-    NSLog(@"Tuning %@", playlistURL);
+- (void)tuneStation: (StationInfo *)station {
+    NSLog(@"Tuning %@ @ %@", station.name, station.playlistLocation);
+    NSURL *playlistURL = [NSURL URLWithString:station.playlistLocation];
+    
     AVURLAsset *playlistAsset = [AVURLAsset assetWithURL:playlistURL];
     AVPlayerItem *playerItem = [AVPlayerItem playerItemWithAsset:playlistAsset];
     mp3Player = [AVPlayer playerWithPlayerItem:playerItem];
@@ -196,11 +200,10 @@ NSInteger GetStationMenuPlacementIndex(){
     playbackView.player = mp3Player;
     
     // Update window
-    window.title = station;
+    window.title = station.name;
     
     // Update the icon (if available)
-    NSImage *stationIcon = [NSImage imageNamed:]
-    
+    [NSApp setApplicationIconImage:station.icon];
 
     [mp3Player play];
 }
@@ -256,8 +259,8 @@ NSInteger GetStationMenuPlacementIndex(){
     
     
     // Start a station playing
-    NSDictionary *defaultStationInfo = stationMap[kDefaultStationKey];
-    [self tuneStation: kDefaultStationKey withPlaylistURL:[NSURL URLWithString:defaultStationInfo[kPlaylistLocation]]];
+    StationInfo *defaultStationInfo = [self stationInfoForStationNamed:kDefaultStationKey];
+    [self tuneStation: defaultStationInfo];
     
     
 }
