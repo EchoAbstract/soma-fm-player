@@ -106,15 +106,15 @@ const NSString *kDefaultStationKey = @"Drone Zone";
 #pragma mark - Menu Stuff
 - (void)buildStationMap {
     stationMap = @[
-                   [StationInfo stationInfoForStationNamed:@"Drone Zone"       withPlaylistLocation:@"http://somafm.com/dronezone130.pls"    withShortKey:@"1" withIconNamed:@"test" atSortOrder:1],
-                   [StationInfo stationInfoForStationNamed:@"Lush"             withPlaylistLocation:@"http://somafm.com/lush130.pls"         withShortKey:@"6" withIconNamed:nil atSortOrder:6],
-                   [StationInfo stationInfoForStationNamed:@"Underground 80's" withPlaylistLocation:@"http://somafm.com/u80s130.pls"         withShortKey:@"3" withIconNamed:nil atSortOrder:3],
-                   [StationInfo stationInfoForStationNamed:@"PopTron"          withPlaylistLocation:@"http://somafm.com/poptron64.pls"       withShortKey:@"2" withIconNamed:@"test" atSortOrder:2],
-                   [StationInfo stationInfoForStationNamed:@"Seven Inch Soul"  withPlaylistLocation:@"http://somafm.com/7soul130.pls"        withShortKey:@"" withIconNamed:nil atSortOrder:9],
-                   [StationInfo stationInfoForStationNamed:@"Suburbs of Goa"   withPlaylistLocation:@"http://somafm.com/suburbsofgoa130.pls" withShortKey:@"" withIconNamed:nil atSortOrder:8],
-                   [StationInfo stationInfoForStationNamed:@"Deep Space One"   withPlaylistLocation:@"http://somafm.com/deepspaceone130.pls" withShortKey:@"" withIconNamed:nil atSortOrder:7],
-                   [StationInfo stationInfoForStationNamed:@"DEF CON Radio"    withPlaylistLocation:@"http://somafm.com/defcon64.pls"        withShortKey:@"4" withIconNamed:nil atSortOrder:4],
-                   [StationInfo stationInfoForStationNamed:@"SF 10-33"         withPlaylistLocation:@"http://somafm.com/sf103364.pls"        withShortKey:@"5" withIconNamed:nil atSortOrder:5]
+                   [StationInfo stationInfoForStationNamed:@"Drone Zone"       withPlaylistLocation:@"http://somafm.com/dronezone130.pls"    withShortKey:@"1" withIconNamed:@"rounded_dronezone120" atSortOrder:1],
+                   [StationInfo stationInfoForStationNamed:@"Lush"             withPlaylistLocation:@"http://somafm.com/lush130.pls"         withShortKey:@"6" withIconNamed:@"rounded_lush-x120" atSortOrder:6],
+                   [StationInfo stationInfoForStationNamed:@"Underground 80's" withPlaylistLocation:@"http://somafm.com/u80s130.pls"         withShortKey:@"3" withIconNamed:@"rounded_u80s-120" atSortOrder:3],
+                   [StationInfo stationInfoForStationNamed:@"PopTron"          withPlaylistLocation:@"http://somafm.com/poptron64.pls"       withShortKey:@"2" withIconNamed:@"rounded_poptron120" atSortOrder:2],
+                   [StationInfo stationInfoForStationNamed:@"Seven Inch Soul"  withPlaylistLocation:@"http://somafm.com/7soul130.pls"        withShortKey:@"" withIconNamed:@"rounded_7soul120" atSortOrder:9],
+                   [StationInfo stationInfoForStationNamed:@"Suburbs of Goa"   withPlaylistLocation:@"http://somafm.com/suburbsofgoa130.pls" withShortKey:@"" withIconNamed:@"rounded_sog120" atSortOrder:8],
+                   [StationInfo stationInfoForStationNamed:@"Deep Space One"   withPlaylistLocation:@"http://somafm.com/deepspaceone130.pls" withShortKey:@"" withIconNamed:@"rounded_deepspaceone120" atSortOrder:7],
+                   [StationInfo stationInfoForStationNamed:@"DEF CON Radio"    withPlaylistLocation:@"http://somafm.com/defcon64.pls"        withShortKey:@"4" withIconNamed:@"rounded_defcon120" atSortOrder:4],
+                   [StationInfo stationInfoForStationNamed:@"SF 10-33"         withPlaylistLocation:@"http://somafm.com/sf103364.pls"        withShortKey:@"5" withIconNamed:@"rounded_sf1033120" atSortOrder:5]
                    ];
 }
 

@@ -13,6 +13,15 @@
 		D3FEC5811ADC1B740035F6F3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC57F1ADC1B740035F6F3 /* MainMenu.xib */; };
 		D3FEC58D1ADC1B740035F6F3 /* SomaFMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEC58C1ADC1B740035F6F3 /* SomaFMTests.m */; };
 		D3FEC5981ADC32E00035F6F3 /* AppleMediaKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEC5971ADC32E00035F6F3 /* AppleMediaKeyController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
+		D3FEC5A51ADF6DAB0035F6F3 /* rounded_7soul120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC59C1ADF6DAB0035F6F3 /* rounded_7soul120.png */; };
+		D3FEC5A61ADF6DAB0035F6F3 /* rounded_deepspaceone120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC59D1ADF6DAB0035F6F3 /* rounded_deepspaceone120.png */; };
+		D3FEC5A71ADF6DAB0035F6F3 /* rounded_defcon120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC59E1ADF6DAB0035F6F3 /* rounded_defcon120.png */; };
+		D3FEC5A81ADF6DAB0035F6F3 /* rounded_dronezone120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC59F1ADF6DAB0035F6F3 /* rounded_dronezone120.png */; };
+		D3FEC5A91ADF6DAB0035F6F3 /* rounded_lush-x120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC5A01ADF6DAB0035F6F3 /* rounded_lush-x120.png */; };
+		D3FEC5AA1ADF6DAB0035F6F3 /* rounded_poptron120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC5A11ADF6DAB0035F6F3 /* rounded_poptron120.png */; };
+		D3FEC5AB1ADF6DAB0035F6F3 /* rounded_sf1033120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC5A21ADF6DAB0035F6F3 /* rounded_sf1033120.png */; };
+		D3FEC5AC1ADF6DAB0035F6F3 /* rounded_sog120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC5A31ADF6DAB0035F6F3 /* rounded_sog120.png */; };
+		D3FEC5AD1ADF6DAB0035F6F3 /* rounded_u80s-120.png in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC5A41ADF6DAB0035F6F3 /* rounded_u80s-120.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +47,15 @@
 		D3FEC58C1ADC1B740035F6F3 /* SomaFMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomaFMTests.m; sourceTree = "<group>"; };
 		D3FEC5961ADC32E00035F6F3 /* AppleMediaKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleMediaKeyController.h; sourceTree = "<group>"; };
 		D3FEC5971ADC32E00035F6F3 /* AppleMediaKeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleMediaKeyController.m; sourceTree = "<group>"; };
+		D3FEC59C1ADF6DAB0035F6F3 /* rounded_7soul120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_7soul120.png; sourceTree = "<group>"; };
+		D3FEC59D1ADF6DAB0035F6F3 /* rounded_deepspaceone120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_deepspaceone120.png; sourceTree = "<group>"; };
+		D3FEC59E1ADF6DAB0035F6F3 /* rounded_defcon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_defcon120.png; sourceTree = "<group>"; };
+		D3FEC59F1ADF6DAB0035F6F3 /* rounded_dronezone120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_dronezone120.png; sourceTree = "<group>"; };
+		D3FEC5A01ADF6DAB0035F6F3 /* rounded_lush-x120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded_lush-x120.png"; sourceTree = "<group>"; };
+		D3FEC5A11ADF6DAB0035F6F3 /* rounded_poptron120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_poptron120.png; sourceTree = "<group>"; };
+		D3FEC5A21ADF6DAB0035F6F3 /* rounded_sf1033120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_sf1033120.png; sourceTree = "<group>"; };
+		D3FEC5A31ADF6DAB0035F6F3 /* rounded_sog120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = rounded_sog120.png; sourceTree = "<group>"; };
+		D3FEC5A41ADF6DAB0035F6F3 /* rounded_u80s-120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "rounded_u80s-120.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +138,15 @@
 		D3FEC5991ADF55910035F6F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				D3FEC59C1ADF6DAB0035F6F3 /* rounded_7soul120.png */,
+				D3FEC59D1ADF6DAB0035F6F3 /* rounded_deepspaceone120.png */,
+				D3FEC59E1ADF6DAB0035F6F3 /* rounded_defcon120.png */,
+				D3FEC59F1ADF6DAB0035F6F3 /* rounded_dronezone120.png */,
+				D3FEC5A01ADF6DAB0035F6F3 /* rounded_lush-x120.png */,
+				D3FEC5A11ADF6DAB0035F6F3 /* rounded_poptron120.png */,
+				D3FEC5A21ADF6DAB0035F6F3 /* rounded_sf1033120.png */,
+				D3FEC5A31ADF6DAB0035F6F3 /* rounded_sog120.png */,
+				D3FEC5A41ADF6DAB0035F6F3 /* rounded_u80s-120.png */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -204,8 +231,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3FEC5A81ADF6DAB0035F6F3 /* rounded_dronezone120.png in Resources */,
+				D3FEC5AC1ADF6DAB0035F6F3 /* rounded_sog120.png in Resources */,
 				D3FEC57E1ADC1B740035F6F3 /* Images.xcassets in Resources */,
+				D3FEC5A91ADF6DAB0035F6F3 /* rounded_lush-x120.png in Resources */,
+				D3FEC5AD1ADF6DAB0035F6F3 /* rounded_u80s-120.png in Resources */,
+				D3FEC5A61ADF6DAB0035F6F3 /* rounded_deepspaceone120.png in Resources */,
+				D3FEC5A71ADF6DAB0035F6F3 /* rounded_defcon120.png in Resources */,
+				D3FEC5AB1ADF6DAB0035F6F3 /* rounded_sf1033120.png in Resources */,
 				D3FEC5811ADC1B740035F6F3 /* MainMenu.xib in Resources */,
+				D3FEC5AA1ADF6DAB0035F6F3 /* rounded_poptron120.png in Resources */,
+				D3FEC5A51ADF6DAB0035F6F3 /* rounded_7soul120.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
