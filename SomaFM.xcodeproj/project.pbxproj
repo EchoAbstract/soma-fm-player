@@ -13,7 +13,6 @@
 		D3FEC5811ADC1B740035F6F3 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC57F1ADC1B740035F6F3 /* MainMenu.xib */; };
 		D3FEC58D1ADC1B740035F6F3 /* SomaFMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEC58C1ADC1B740035F6F3 /* SomaFMTests.m */; };
 		D3FEC5981ADC32E00035F6F3 /* AppleMediaKeyController.m in Sources */ = {isa = PBXBuildFile; fileRef = D3FEC5971ADC32E00035F6F3 /* AppleMediaKeyController.m */; settings = {COMPILER_FLAGS = "-fno-objc-arc"; }; };
-		D3FEC59B1ADF55A70035F6F3 /* test.jpg in Resources */ = {isa = PBXBuildFile; fileRef = D3FEC59A1ADF55A70035F6F3 /* test.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,7 +38,6 @@
 		D3FEC58C1ADC1B740035F6F3 /* SomaFMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomaFMTests.m; sourceTree = "<group>"; };
 		D3FEC5961ADC32E00035F6F3 /* AppleMediaKeyController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppleMediaKeyController.h; sourceTree = "<group>"; };
 		D3FEC5971ADC32E00035F6F3 /* AppleMediaKeyController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppleMediaKeyController.m; sourceTree = "<group>"; };
-		D3FEC59A1ADF55A70035F6F3 /* test.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = test.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,7 +120,6 @@
 		D3FEC5991ADF55910035F6F3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				D3FEC59A1ADF55A70035F6F3 /* test.jpg */,
 			);
 			name = Resources;
 			sourceTree = "<group>";
@@ -208,7 +205,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				D3FEC57E1ADC1B740035F6F3 /* Images.xcassets in Resources */,
-				D3FEC59B1ADF55A70035F6F3 /* test.jpg in Resources */,
 				D3FEC5811ADC1B740035F6F3 /* MainMenu.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
