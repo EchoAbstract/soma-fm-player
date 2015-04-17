@@ -208,17 +208,6 @@ NSInteger GetStationMenuPlacementIndex(){
     [mp3Player play];
 }
 
-#pragma mark - NSNotificationCenter delegate methods
-
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object
-                        change:(NSDictionary *)change context:(void *)context{
-    if ([keyPath isEqualToString:@"accessLog"]){
-        AVPlayerItem *item = (AVPlayerItem *)object;
-        AVPlayerItemAccessLog *accessLog = item.accessLog;
-        NSLog(@"AL: %@", [accessLog.events objectAtIndex:accessLog.events.count - 1]);
-    }
-}
-
 #pragma mark - NSApplicationDelegate Methods
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
