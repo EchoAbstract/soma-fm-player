@@ -101,24 +101,48 @@
 
 #pragma mark - Constants
 
-const NSString *kDefaultStationKey = @"Drone Zone";
+NSString * const kDefaultStationKey = @"Fluid";
 
 #pragma mark - Menu Stuff
 - (void)buildStationMap {
     stationMap = @[
-                   [StationInfo stationInfoForStationNamed:@"Drone Zone"       withPlaylistLocation:@"http://somafm.com/dronezone130.pls"    withShortKey:@"1" withIconNamed:@"rounded_dronezone120" atSortOrder:1],
-                   [StationInfo stationInfoForStationNamed:@"Lush"             withPlaylistLocation:@"http://somafm.com/lush130.pls"         withShortKey:@"6" withIconNamed:@"rounded_lush-x120" atSortOrder:6],
-                   [StationInfo stationInfoForStationNamed:@"Underground 80's" withPlaylistLocation:@"http://somafm.com/u80s130.pls"         withShortKey:@"3" withIconNamed:@"rounded_u80s-120" atSortOrder:3],
-                   [StationInfo stationInfoForStationNamed:@"PopTron"          withPlaylistLocation:@"http://somafm.com/poptron64.pls"       withShortKey:@"2" withIconNamed:@"rounded_poptron120" atSortOrder:2],
-                   [StationInfo stationInfoForStationNamed:@"Seven Inch Soul"  withPlaylistLocation:@"http://somafm.com/7soul130.pls"        withShortKey:@"" withIconNamed:@"rounded_7soul120" atSortOrder:9],
-                   [StationInfo stationInfoForStationNamed:@"Suburbs of Goa"   withPlaylistLocation:@"http://somafm.com/suburbsofgoa130.pls" withShortKey:@"" withIconNamed:@"rounded_sog120" atSortOrder:8],
-                   [StationInfo stationInfoForStationNamed:@"Deep Space One"   withPlaylistLocation:@"http://somafm.com/deepspaceone130.pls" withShortKey:@"" withIconNamed:@"rounded_deepspaceone120" atSortOrder:7],
-                   [StationInfo stationInfoForStationNamed:@"DEF CON Radio"    withPlaylistLocation:@"http://somafm.com/defcon64.pls"        withShortKey:@"4" withIconNamed:@"rounded_defcon120" atSortOrder:4],
-                   [StationInfo stationInfoForStationNamed:@"SF 10-33"         withPlaylistLocation:@"http://somafm.com/sf103364.pls"        withShortKey:@"5" withIconNamed:@"rounded_sf1033120" atSortOrder:5]
+                   [StationInfo stationInfoForStationNamed:@"Fluid" withPlaylistLocation:@"https://somafm.com/fluid130.pls" withShortKey:@"1" withIconNamed:@"rounded_fluid120" atSortOrder:0],
+                   [StationInfo stationInfoForStationNamed:@"DEF CON Radio" withPlaylistLocation:@"https://somafm.com/defcon64.pls" withShortKey:@"2" withIconNamed:@"rounded_defcon120" atSortOrder:1],
+                   [StationInfo stationInfoForStationNamed:@"ThistleRadio" withPlaylistLocation:@"https://somafm.com/thistle64.pls" withShortKey:@"3" withIconNamed:@"rounded_thistle120" atSortOrder:2],
+                   [StationInfo stationInfoForStationNamed:@"PopTron" withPlaylistLocation:@"https://somafm.com/poptron64.pls" withShortKey:@"4" withIconNamed:@"rounded_poptron120" atSortOrder:3],
+                   [StationInfo stationInfoForStationNamed:@"Lush" withPlaylistLocation:@"https://somafm.com/lush130.pls" withShortKey:@"5" withIconNamed:@"rounded_lush-x120" atSortOrder:4],
+                   [StationInfo stationInfoForStationNamed:@"The Trip" withPlaylistLocation:@"https://somafm.com/thetrip64.pls" withShortKey:@"6" withIconNamed:@"rounded_thetrip120" atSortOrder:5],
+                   [StationInfo stationInfoForStationNamed:@"Drone Zone" withPlaylistLocation:@"https://somafm.com/dronezone130.pls" withShortKey:@"7" withIconNamed:@"rounded_dronezone120" atSortOrder:6],
+                   [StationInfo stationInfoForStationNamed:@"Deep Space One" withPlaylistLocation:@"https://somafm.com/deepspaceone130.pls" withShortKey:@"8" withIconNamed:@"rounded_deepspaceone120" atSortOrder:7],
+                   [StationInfo stationInfoForStationNamed:@"Suburbs of Goa" withPlaylistLocation:@"https://somafm.com/suburbsofgoa130.pls" withShortKey:@"9" withIconNamed:@"rounded_sog120" atSortOrder:8],
+                   [StationInfo stationInfoForStationNamed:@"Groove Salad" withPlaylistLocation:@"https://somafm.com/groovesalad130.pls" withShortKey:@"0" withIconNamed:@"rounded_groovesalad120" atSortOrder:9],
+                   [StationInfo stationInfoForStationNamed:@"Indie Pop Rocks!" withPlaylistLocation:@"https://somafm.com/indiepop130.pls" withShortKey:@"" withIconNamed:@"rounded_indychick" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Space Station Soma" withPlaylistLocation:@"https://somafm.com/spacestation130.pls" withShortKey:@"" withIconNamed:@"rounded_sss" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Secret Agent" withPlaylistLocation:@"https://somafm.com/secretagent130.pls" withShortKey:@"" withIconNamed:@"rounded_secretagent120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Underground 80s" withPlaylistLocation:@"https://somafm.com/u80s130.pls" withShortKey:@"" withIconNamed:@"rounded_u80s-120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Beat Blender" withPlaylistLocation:@"https://somafm.com/beatblender64.pls" withShortKey:@"" withIconNamed:@"rounded_blender120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Boot Liquor" withPlaylistLocation:@"https://somafm.com/bootliquor130.pls" withShortKey:@"" withIconNamed:@"rounded_bootliquor120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Folk Forward" withPlaylistLocation:@"https://somafm.com/folkfwd64.pls" withShortKey:@"" withIconNamed:@"rounded_folkfwd120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Left Coast 70s" withPlaylistLocation:@"https://somafm.com/seventies64.pls" withShortKey:@"" withIconNamed:@"rounded_seventies120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Sonic Universe" withPlaylistLocation:@"https://somafm.com/sonicuniverse64.pls" withShortKey:@"" withIconNamed:@"rounded_sonicuniverse120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Illinois Street Lounge" withPlaylistLocation:@"https://somafm.com/illstreet130.pls" withShortKey:@"" withIconNamed:@"rounded_illstreet" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"BAGeL Radio" withPlaylistLocation:@"https://somafm.com/bagel64.pls" withShortKey:@"" withIconNamed:@"rounded_bagel120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Digitalis" withPlaylistLocation:@"https://somafm.com/digitalis130.pls" withShortKey:@"" withIconNamed:@"rounded_digitalis120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Seven Inch Soul" withPlaylistLocation:@"https://somafm.com/7soul130.pls" withShortKey:@"" withIconNamed:@"rounded_7soul120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Dub Step Beyond" withPlaylistLocation:@"https://somafm.com/dubstep64.pls" withShortKey:@"" withIconNamed:@"rounded_dubstep120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"cliqhop idm" withPlaylistLocation:@"https://somafm.com/cliqhop64.pls" withShortKey:@"" withIconNamed:@"rounded_cliqhop120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Mission Control" withPlaylistLocation:@"https://somafm.com/missioncontrol64.pls" withShortKey:@"" withIconNamed:@"rounded_missioncontrol120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Black Rock FM" withPlaylistLocation:@"https://somafm.com/brfm130.pls" withShortKey:@"" withIconNamed:@"rounded_1023brc" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Covers" withPlaylistLocation:@"https://somafm.com/covers64.pls" withShortKey:@"" withIconNamed:@"rounded_covers120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Earwaves" withPlaylistLocation:@"https://somafm.com/earwaves130.pls" withShortKey:@"" withIconNamed:@"rounded_earwaves120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Doomed" withPlaylistLocation:@"https://somafm.com/doomed64.pls" withShortKey:@"" withIconNamed:@"rounded_doomed120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"SF 10-33" withPlaylistLocation:@"https://somafm.com/sf103364.pls" withShortKey:@"" withIconNamed:@"rounded_sf1033120" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"Metal Detector" withPlaylistLocation:@"https://somafm.com/metal130.pls" withShortKey:@"" withIconNamed:@"rounded_metal-200" atSortOrder:50],
+                   [StationInfo stationInfoForStationNamed:@"South by Soma" withPlaylistLocation:@"https://somafm.com/sxfm64.pls" withShortKey:@"" withIconNamed:@"rounded_sxfm120" atSortOrder:50]
                    ];
 }
 
-- (StationInfo *)stationInfoForStationNamed: (NSString *)name {
+- (StationInfo *)stationInfoForStationNamed: (NSString * const)name {
   for (StationInfo *info in stationMap){
     if ([info.name isEqualToString: name]){
       return info;
@@ -223,7 +247,7 @@ NSInteger GetStationMenuPlacementIndex(){
     [mainMenu insertItem:stationMenu atIndex:index];
     
     CGRect windowFrame = window.frame;
-    CGSize windowSize = CGSizeMake(200, 50);
+    CGSize windowSize = CGSizeMake(250, 46);
     [window setMinSize:windowSize];
     [window setMaxSize:windowSize];
     windowFrame.size = windowSize;
