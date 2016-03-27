@@ -1,4 +1,4 @@
-Soma FM Player
+Soma FM Player (v1.6)
 ==============
 
 A simple player for the streams at [Soma FM](http://somafm.com/).
@@ -23,15 +23,16 @@ which work fine, but are too general for when I'm listening at work).
 
 ## Currently listed streams
 
-* [Drone Zone (⌘1)](http://somafm.com/dronezone/)
-* [Lush (⌘6)](http://somafm.com/lush/)
-* [Underground 80's (⌘3)](http://somafm.com/u80s/)
-* [PopTron (⌘2)](http://somafm.com/poptron/)
-* [Seven Inch Soul](http://somafm.com/7soul/)
-* [Suburbs of Goa](http://somafm.com/suburbsofgoa/)
-* [Deep Space One](http://somafm.com/deepspaceone/)
-* [DEF CON Radio (⌘4)](http://somafm.com/defcon/)
-* [SF 10-33 (⌘5)](http://somafm.com/sf1033/)
+* [Fluid (⌘1)](http://somafm.com/fluid/)
+* [DEF CON Radio(⌘2)](http://somafm.com/defcon/)
+* [Thistle Radio (⌘3)](http://somafm.com/thistle/)
+* [PopTron (⌘4)](http://somafm.com/poptron/)
+* [Lush (⌘5)](http://somafm.com/lush/)
+* [The Trip (⌘6)](http://somafm.com/thetrip/)
+* [Drone Zone (⌘7)](http://somafm.com/dronezone/)
+* [Deep Space One (⌘8)](http://somafm.com/deepspaceone/)
+* [Suburbs of Goa (⌘9)](http://somafm.com/suburbsofgoa/)
+* [Groove Salad (⌘10)](http://somafm.com/groovesalad/)
 
 
 ## TODO
@@ -40,8 +41,6 @@ which work fine, but are too general for when I'm listening at work).
 * Do something with the media player display
 * Don't pause the stream, stop it and restart it (maybe only after a certain
   delay...)
-* Add the rest of Soma FM's streams
-* Add a tool to fetch the streams and logos and dynamically build the list
 
 
 ## Donate
