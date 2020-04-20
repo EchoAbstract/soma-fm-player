@@ -69,10 +69,10 @@ CGEventRef tapEventCallback(CGEventTapProxy proxy, CGEventType type, CGEventRef 
     if([nsEvent subtype] != 8)
         return event;
     
-    int data = [nsEvent data1];
-    int keyCode = (data & 0xFFFF0000) >> 16;
-    int keyFlags = (data & 0xFFFF);
-    int keyState = (keyFlags & 0xFF00) >> 8;
+    long data = [nsEvent data1];
+    long keyCode = (data & 0xFFFF0000) >> 16;
+    long keyFlags = (data & 0xFFFF);
+    long keyState = (keyFlags & 0xFF00) >> 8;
     BOOL keyIsRepeat = (keyFlags & 0x1) > 0;
     
     if(keyIsRepeat)
